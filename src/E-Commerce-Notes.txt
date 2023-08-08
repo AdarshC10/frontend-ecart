@@ -1,0 +1,56 @@
+
+
+                                            E COMMERCE FROMTEND CREATION
+                                        ---------------------------------------
+                        
+                        1. Create Folder E-cart inside the  it create frontend and backend
+                        2. Project creation : ng new  e-cart-frontend
+                        3. Run the frontend : ng s -o
+                        4. Clean the code in app.componenet.html
+                        5. install third part Libraries
+                                ->Copy and paste bootstrap link in index.html
+                                -> copy and paste fontawsome cdnjs link in index.html
+                                ->copy and paste google fonts in style.css
+                        6.creating Components
+                        7. Lazy-loading
+                                ->Lazy loading helps keep initial bundle sizes smaller,
+                                 which in turn helps decrease load times.
+
+                            ->Module Genertaion - ng g m products --route products --module app.module
+                        8. component create  inside the products module
+
+                            ->ng g c products/allProducts
+                            ->ng g c products/viewProducts
+                            ->ng g c products/cart
+                            ->ng g c products/wishlist
+
+                            Not include in the products module
+                            ->ng g c header
+                            ->ng g c footer 
+                            ->ng g c pageNotFound
+
+                        9. set the paths
+
+                            http://localhost:4200/ => http://localhost:4200/products/allProducts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            11.behaviour subject
+
+                                it is used to share stream of data from one component to another 
+                                its under the rxjs Librarie
+                                its a asyncronous function
+                                next() mathod is used to attach the data

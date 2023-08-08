@@ -1,0 +1,29 @@
+ <!-- Navigation-->
+ <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand text-white" routerLink="">Modern Crafts</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="me-5">
+                <input (keyup)="search($event)" type="text"  placeholder="Search Your product" class="form-control ms-5">
+            </div>
+            <form class="d-flex justify-content-end">
+            <!-- Wishlist button -->
+                <button class="btn btn-outline-light ms-5" type="submit" routerLink="products/wishlist">
+                    
+                    <i class="fa-solid fa-heart-circle-plus fa-beat text-danger"></i>
+                    Wishlist
+                   
+                    
+                </button>
+                <!-- cart button -->
+                <button class="btn btn-outline-light ms-5" type="submit" routerLink="products/cart">
+                    <i class="fa-solid fa-cart-plus fa-fade text-warning"></i> 
+                    Cart
+                    
+                    <span class="badge bg-dark text-white ms-3 rounded-pill">{{cartcounts}}</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>

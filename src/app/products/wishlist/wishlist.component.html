@@ -1,0 +1,45 @@
+<!-- Empty wishlist -->
+
+<div class="container" *ngIf="allwishlist.length==0">
+    <div class="row">
+        <div class="col text-center">
+            <!-- Empty wishlist image -->
+            <img class="m-5" src=" https://cdn.dribbble.com/users/1514097/screenshots/3550111/media/b8c99fff9c3edae7f6d3b616d7f3cc6b.gif" alt="">
+            <br><br>
+            <h3>Your Wishlist is Empty...!</h3>
+            <button class="btn btn-info m-5">Shope More</button>
+            <br>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Wishlist with content -->
+<section class="">
+    <div class="container mt-3">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let wish of allwishlist">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img height="300px" class="card-img-top" [src]="wish.image" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{wish.title}}</h5>
+                            <!-- Product price-->
+                           ${{wish.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a (click)="deletewishlist(wish.id)" class="btn btn-outline-dark mt-auto m-1">Remove <i class="fa-solid fa-heart-circle-xmark fa-beat-fade text-danger"></i></a>
+                            <a (click)="addtocart(wish)" class="btn btn-outline-dark mt-auto" href="#" >Add To Cart<i class="fa-solid fa-cart-plus fa-beat-fade text-warning"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
